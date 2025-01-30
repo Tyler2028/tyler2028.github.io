@@ -2,20 +2,71 @@
 <html lang="en">
 <head>
     <title>Web Dev</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header, nav, main, footer {
+            padding: 20px;
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header a {
+            text-decoration: none;
+            color: #1410ebd8;
+        }
+        nav p {
+            font-size: 18px;
+            margin: 0;
+        }
+        main table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        main table, main th, main td {
+            border: 1px solid #ddd;
+        }
+        main th, main td {
+            padding: 10px;
+            text-align: left;
+        }
+        main th {
+            background-color: #f2f2f2;
+        }
+        footer h2 {
+            margin-top: 0;
+        }
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        footer li {
+            margin-bottom: 10px;
+        }
+        footer a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <p style="font-size: 22px;">
-        <b><strong>Web Dev</strong></b>
-    </p>
     <header>
+        <h1>Web Development</h1>
         <strong>
-            <a href="https://github.com/Tyler2028/tyler2028.github.io/actions" target="_blank">Recent changes</a>
+            <a href="https://github.com/Tyler2028/tyler2028.github.io/actions" target="_blank">Click here for Recent changes</a>
         </strong>
     </header>
     <nav>
-        <br>
         <p>Intro to HTML:</p>
-    </nav>
     <iframe 
         width="560" 
         height="315" 
@@ -26,10 +77,10 @@
         referrerpolicy="strict-origin-when-cross-origin" 
         allowfullscreen>
     </iframe>
+    </nav>
     <main>
         <table>
-            <br>
-            <p><strong>Laptop desktop price comparison:</strong></p>
+            <caption><strong>Laptop and desktop price comparison:</strong></caption>
             <tr>
               <th>Product</th>
               <th>Price</th>
@@ -40,9 +91,11 @@
               <td>$1200</td>
               <td>1</td>
             </tr>
-              <td>Descktop</td>
+            <tr>
+              <td>Desktop</td>
               <td>$3000</td>
               <td>1</td>
+            </tr>
           </table>
         <article>
             <section>
@@ -54,7 +107,6 @@
         </aside>
     </main>
     <footer>
-        <br>
         <div class="forum-container">
             <h2>Other Pages</h2>
             <ul>
@@ -66,7 +118,7 @@
                     <h3><a href="page2.html">page 2</a></h3>
                     <p></p>
                 </li>
-                </ul>
+            </ul>
         </div>
     </footer>
 </body>
