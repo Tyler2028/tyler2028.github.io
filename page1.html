@@ -6,7 +6,7 @@
     <body>
         <header>
             <p style="font-size: 22px;">
-                <h><b><strong>Page 1</strong></b></h>
+                <b><strong>CSS Syntax, Errors, and Solutions</strong></b>
             </p>
         </header>
         <nav>
@@ -17,31 +17,50 @@
         <main>
             <article>
                 <section>
-                    <h2>Section 1</h2>
-                    <p>Content for section 1.</p>
-                </section>
-                <section>
-                    <h2>Section 2</h2>
-                    <p>Content for section 2.</p>
+                    <h2>CSS Syntax</h2>
+                    <h3>Selectors:</h3>
+                    <p>element { property: value; }</p>
+                    <p>#id { property: value; }</p>
+                    <p>.class { property: value; }</p>
+                    <p>element, element { property: value; } (Group Selector)</p>
+                    <p>element element { property: value; } (Descendant Selector)</p>
+                    <p>element &gt; element { property: value; } (Child Selector)</p>
+                    <h3>Properties:</h3>
+                    <p>color: red;</p>
+                    <p>background-color: #ffffff;</p>
+                    <p>font-size: 16px;</p>
+                    <p>margin: 20px;</p>
+                    <p>padding: 10px;</p>
+                    <p>border: 1px solid black;</p>
+                    <h3>Pseudo-classes:</h3>
+                    <p>element:hover { property: value; }</p>
+                    <p>element:focus { property: value; }</p>
+                    <p>element:active { property: value; }</p>
+                    <h3>Pseudo-elements:</h3>
+                    <p>element::before { content: "text"; }</p>
+                    <p>element::after { content: "text"; }</p>
+                    <p>element::first-letter { property: value; }</p>
+                    <p>element::first-line { property: value; }</p>
+                    <h3>Common Errors and Solutions</h3>
+                    <h4>Missing Semicolon:</h4>
+                    <p>CSS<br>color: red /* Missing semicolon */</p>
+                    <p>Solution: Ensure each property-value pair ends with a semicolon.<br>CSS<br>color: red;</p>
+                    <h4>Incorrect Selector:</h4>
+                    <p>CSS<br>button .submit { color: blue; } /* Incorrect selector */</p>
+                    <p>Solution: Use the correct selector for the intended element.<br>CSS<br>.submit { color: blue; }</p>
+                    <h4>Typographical Errors in Property Names:</h4>
+                    <p>CSS<br>background-color: red; /* Typo in property name */</p>
+                    <p>Solution: Double-check property names for typos.<br>CSS<br>background-color: red;</p>
+                    <h4>Incorrect Hex Code:</h4>
+                    <p>CSS<br>color: #ggg; /* Invalid hex code */</p>
+                    <p>Solution: Use valid hex codes.<br>CSS<br>color: #fff;</p>
+                    <h4>Conflicting Styles:</h4>
+                    <p>CSS<br>.header { color: red; }<br>.header { color: blue; } /* Conflicting styles */</p>
+                    <p>Solution: Combine or choose one style.<br>CSS<br>.header { color: blue; }</p>
                 </section>
             </article>
-            <aside>
-                <h2>Aside</h2>
-                <p>Additional content.</p>
-            </aside>
         </main>
         <footer>
         </footer>
     </body>
 </html>
-
-<!-- comments are in these delimiters -->
-
-<!--
-   And
-   they
-   can be
-   on
-   multiple
-   lines.
--->
