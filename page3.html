@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <ul>
+        <li><a href="index.html">Back to main page</a></li>
+    </ul>
+    <title>Encapsulation Example</title>
+    <style>
+        pre
+        {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Encapsulation Example</h1>
+    <div id="encapsulation">
+        <pre><encapsulation>
+        //Using a class to show encapsulation
+        class Person 
+        {
+            #name; //Private
+
+            constructor(name) 
+            {
+                this.#name = name; //Private
+            }
+
+            //Public method to access to private
+            getName() 
+            {
+                return this.#name;
+            }
+
+            //Public method to modify private attributes
+            setName(newName) 
+            {
+                this.#name = newName;
+            }
+        }
+
+        const person = new Person("Bob");
+        const outputDiv = document.getElementById("output");
+
+        //Display first name
+        outputDiv.innerHTML += `&lt;p&gt;${person.getName()}&lt;/p&gt;`; //Output: Bob
+
+        //Update name and display again
+        person.setName("Bill");
+        outputDiv.innerHTML += `&lt;p&gt;${person.getName()}&lt;/p&gt;`; //Output: Bill
+        </encapsulation></pre>
+    </div>
+    <h2>Output</h2>
+    <div id="output"></div>
+    <script>
+        // Using a class to demonstrate encapsulation
+        class Person 
+        {
+            #name; // Private field
+
+            constructor(name) 
+            {
+                this.#name = name; // Private property
+            }
+
+            // Public method to access private property
+            getName() 
+            {
+                return this.#name;
+            }
+
+            // Public method to modify private property
+            setName(newName) 
+            {
+                this.#name = newName;
+            }
+        }
+
+        const person = new Person("Bob");
+        const outputDiv = document.getElementById("output");
+
+        // Display initial name
+        outputDiv.innerHTML += `<p>${person.getName()}</p>`; // Output: Bob
+
+        // Update name and display again
+        person.setName("Bill");
+        outputDiv.innerHTML += `<p>${person.getName()}</p>`; // Output: Bill
+    </script>
+</body>
+</html>

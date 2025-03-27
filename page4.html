@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <ul>
+        <li><a href="index.html">Back to main page</a></li>
+    </ul>
+    <title>Inheritance Example</title>
+    <style>
+        pre 
+        {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inheritance Example</h1>
+    <div id="Inheritance">
+        <pre>
+class Animal {
+    constructor(name) 
+    {
+        // Initialize the name
+        this.name = name;
+    }
+
+    // Define a method for the animal to speak
+    speak()
+    {
+        // Return a message
+        return `${this.name} makes a noise.`;
+    }
+}
+
+// Define a subclass called Dog that extends the Animal class
+{
+    // Override the speak method for the Dog class
+    speak() 
+    {
+        // Return a message indicating the dog barks
+        return `${this.name} barks.`;
+    }
+}
+
+// Example usage
+// Create an instance of the Dog class with the name 'Buddy'
+const dog = new Dog('Buddy');
+
+// Display the result of the speak method in the 'output' div
+document.getElementById('output').innerText = dog.speak();
+        </pre>
+    </div>
+    <h2>Output</h2>
+    <div id="output"></div>
+    <script>
+        class Animal {
+            constructor(name) 
+            {
+                this.name = name;
+            }
+
+            speak() 
+            {
+                return `${this.name} makes a noise.`;
+            }
+        }
+
+        class Dog extends Animal 
+        {
+            speak() 
+            {
+                return `${this.name} barks.`;
+            }
+        }
+
+        // Example usage
+        const dog = new Dog('Buddy');
+        document.getElementById('output').innerText = dog.speak();
+    </script>
+</body>
+</html>

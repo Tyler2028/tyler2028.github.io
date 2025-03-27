@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <ul>
+        <li><a href="index.html">Back to main page</a></li>
+    </ul>
+    <title>Abstraction Example</title>
+    <style>
+        pre 
+        {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Abstraction Example</h1>
+    <div id="Abstraction">
+        <pre>
+class Vehicle {
+    constructor(type, wheels) {
+        // Initialize the type of vehicle and number of wheels
+        this.type = type;
+        this.wheels = wheels;
+    }
+
+    // Method to describe the movement of the vehicle
+    move() {
+        return `${this.type} is moving on ${this.wheels} wheels.`;
+    }
+}
+
+// Subclass representing a type of vehicle
+class Car extends Vehicle {
+    constructor(brand) {
+        // Call the parent class constructor with 'Car' as type and 4 wheels
+        super('Car', 4);
+        // Initialize the brand of the car
+        this.brand = brand;
+    }
+
+    // Method to show the car honking
+    honk() {
+        return `${this.brand} car is honking!`;
+    }
+}
+
+// Example usage
+// Create an instance of the Car class with the brand 'Toyota'
+const myCar = new Car('Toyota');
+// Log the movement of the car to the console
+console.log(myCar.move());
+// Log the honking action of the car to the console
+console.log(myCar.honk());
+        </pre>
+    </div>
+    <h2>Output</h2>
+    <div id="output"></div>
+    <script>
+        class Vehicle {
+            constructor(type, wheels) {
+                this.type = type;
+                this.wheels = wheels;
+            }
+
+            move() {
+                return `${this.type} is moving on ${this.wheels} wheels.`;
+            }
+        }
+
+        class Car extends Vehicle {
+            constructor(brand) {
+                super('Car', 4);
+                this.brand = brand;
+            }
+
+            honk() {
+                return `${this.brand} car is honking.`;
+            }
+        }
+
+        // Example usage
+        const myCar = new Car('Toyota');
+        const outputDiv = document.getElementById('output');
+        outputDiv.innerHTML = `
+            <p>${myCar.move()}</p>
+            <p>${myCar.honk()}</p>
+        `;
+    </script>
+</body>
+</html>

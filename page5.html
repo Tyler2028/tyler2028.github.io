@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <ul>
+        <li><a href="index.html">Back to main page</a></li>
+    </ul>
+    <title>Polymorphism Example</title>
+    <style>
+        pre 
+        {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Polymorphism Example</h1>
+    <div id="Polymorphism">
+        <pre>
+class Animal 
+{
+    // Method to show the sound an animal makes
+    speak() 
+    {
+        return "This animal makes a sound.";
+    }
+}
+
+// class representing Dog inheriting from Animal
+{
+    // Overriding the speak method to provide attubrites for Dog
+    speak() 
+    {
+        return "The dog barks.";
+    }
+}
+
+// class representing a Cat inheriting from Animal
+{
+    // Overriding the speak method to provide attubrites for Cat
+    speak() 
+    {
+        return "The cat meows.";
+    }
+}
+
+function demonstratePolymorphism() 
+{
+    // Creating an array of Animal objects, including Dog and Cat
+    const animals = [new Animal(), new Dog(), new Cat()];
+    
+    // Using the speak method on each object, showcasing polymorphism
+    // The method called depends on the actual type of the object
+    return animals.map(animal =&gt; animal.speak()).join('&lt;br&gt;');
+}
+        </pre>
+    </div>
+    <h2>Output</h2>
+    <div id="output"></div>
+    <script>
+        class Animal {
+            speak() {
+                return "This animal makes a sound.";
+            }
+        }
+
+        class Dog extends Animal {
+            speak() {
+                return "The dog barks.";
+            }
+        }
+
+        class Cat extends Animal {
+            speak() {
+                return "The cat meows.";
+            }
+        }
+
+        function demonstratePolymorphism() {
+            const animals = [new Animal(), new Dog(), new Cat()];
+            return animals.map(animal => animal.speak()).join('<br>');
+        }
+
+        // Display the output
+        document.getElementById('output').innerHTML = demonstratePolymorphism();
+    </script>
+</body>
+</html>
